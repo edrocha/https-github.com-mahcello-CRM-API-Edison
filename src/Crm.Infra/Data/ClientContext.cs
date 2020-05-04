@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Crm.ApplicationCore.Entity;
+using Crm.Infra.EntityConfig;
 
 namespace Crm.Infra.Data
 {
@@ -16,7 +17,11 @@ namespace Crm.Infra.Data
         //Responsável pela configuração do framework
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Client>().ToTable("Clientes");
+
+            #region Configuração do Client
+              modelBuilder.Entity<Client>().ToTable("Clientes");
+              modelBuilder.ApplyConfiguration(new ClientMap());
+           #endregion
         }
     }
 }
