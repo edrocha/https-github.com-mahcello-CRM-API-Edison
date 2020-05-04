@@ -9,9 +9,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Crm.UI.Web.Data;
+using Crm.Infra;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Crm.Infra.Data;
 
 namespace Crm.UI.Web
 {
@@ -34,6 +36,8 @@ namespace Crm.UI.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<ClientContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

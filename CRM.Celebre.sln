@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Domain", "2-Domain", "{D9
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Infra", "3-Infra", "{8E6EE191-00BF-45FF-B018-2C7C514F8718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.ApplicationCore", "src\Crm.ApplicationCore\Crm.ApplicationCore.csproj", "{3111564E-91DE-434F-ADAA-81BD8D11FF15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.ApplicationCore", "src\Crm.ApplicationCore\Crm.ApplicationCore.csproj", "{3111564E-91DE-434F-ADAA-81BD8D11FF15}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.Infra", "src\Crm.Infra\Crm.Infra.csproj", "{D92E5758-38BE-437C-98B8-59140241C01D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.Infra", "src\Crm.Infra\Crm.Infra.csproj", "{D92E5758-38BE-437C-98B8-59140241C01D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crm.UI.Web", "src\Crm.UI.Web\Crm.UI.Web.csproj", "{DC983A03-75B9-42D7-B609-8D17FB0F3646}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Crm.UI.Web", "src\Crm.UI.Web\Crm.UI.Web.csproj", "{DC983A03-75B9-42D7-B609-8D17FB0F3646}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

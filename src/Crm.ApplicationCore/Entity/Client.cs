@@ -1,16 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Crm.ApplicationCore.Entity
 {
-    class Client
+    public class Client
     {
+        
         public Client() 
             {
 
             }
-
+        
+        [Key]
         public int cliID { get; set; }
 
         public string cliNome { get; set; }
