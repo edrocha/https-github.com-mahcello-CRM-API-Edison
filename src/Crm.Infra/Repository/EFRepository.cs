@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Crm.Infra.Repository
 {
-    public class EFRepository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class  EFRepository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected readonly ClientContext _dbContext;
 
@@ -17,14 +17,14 @@ namespace Crm.Infra.Repository
         {
             _dbContext = dbContext;
         }
-        public TEntity Adicionar(TEntity entity)
+        public virtual TEntity Adicionar(TEntity entity)
         {
             _dbContext.Set<TEntity>().Add(entity);
             _dbContext.SaveChanges();
             return entity;
         }
 
-        public void Atualizar(TEntity entity)
+        public virtual void Atualizar(TEntity entity)
         {
             _dbContext.Entry(entity).State = EntityState.Modified;
             _dbContext.SaveChanges();
@@ -36,7 +36,7 @@ namespace Crm.Infra.Repository
             return _dbContext.Set<TEntity>().Where(predicado).AsEnumerable();
         }
 
-        public TEntity ObterpoID(int id)
+        public virtual TEntity ObterpoID(int id)
         {
             return _dbContext.Set<TEntity>().Find(id);
         }
